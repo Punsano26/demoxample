@@ -18,7 +18,7 @@ const EditSub = () => {
     fetch("http://localhost:8000/subject/" + id)
       .then((res) => res.json())
       .then((data) => {
-        setStudent(data);
+        setSubject(data);
       })
       .catch((err) => {
         console.log(err);
@@ -60,7 +60,7 @@ const EditSub = () => {
           <form className="container" onSubmit={handleSummit}>
             <div className="card">
               <div className="card-title">
-                <h2>Add new Subject</h2>
+                <h2>Edit Subject</h2>
               </div>
               <div className="card-body">
                 <div className="row">
@@ -114,6 +114,7 @@ const EditSub = () => {
                         id="password"
                         value={subject.password}
                         onChange={handleChange}
+                        maxlength="8"
                         className="form-control"
                       />
                     </div>
@@ -122,7 +123,7 @@ const EditSub = () => {
                     <div className="form-group">
                       <label htmlFor="status">Status</label>
                       <input
-                        type="date"
+                        type="text"
                         required
                         name="status"
                         id="status"
@@ -164,7 +165,7 @@ const EditSub = () => {
                     <div className="form-group">
                       <label htmlFor="birthdaySub">birthdaySub</label>
                       <input
-                        type="text"
+                        type="date"
                         required
                         name="birthdaySub"
                         id="birthdaySub"
@@ -184,7 +185,7 @@ const EditSub = () => {
                         max="2024"
                         name="admissionYear"
                         id="admissionYear"
-                        value={student.admissionYear}
+                        value={subject.admissionYear}
                         onChange={handleChange}
                         className="form-control"
                       />

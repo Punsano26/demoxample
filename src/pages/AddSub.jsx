@@ -92,6 +92,7 @@ const AddSub = () => {
                         name="password"
                         id="password"
                         value={subject.password}
+                        maxlength="5"
                         onChange={handleChange}
                         className="form-control"
                       />
@@ -101,7 +102,7 @@ const AddSub = () => {
                     <div className="form-group">
                       <label htmlFor="status">Status</label>
                       <input
-                        type="date"
+                        type="text"
                         required
                         name="status"
                         id="status"
@@ -143,7 +144,7 @@ const AddSub = () => {
                     <div className="form-group">
                       <label htmlFor="birthdaySub">birthdaySub</label>
                       <input
-                        type="text"
+                        type="date"
                         required
                         name="birthdaySub"
                         id="birthdaySub"
@@ -163,7 +164,7 @@ const AddSub = () => {
                         max="2024"
                         name="admissionYear"
                         id="admissionYear"
-                        value={student.admissionYear}
+                        value={subject.admissionYear}
                         onChange={handleChange}
                         className="form-control"
                       />
